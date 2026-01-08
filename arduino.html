@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino for Beginners | Master the Board</title>
+    <style>
+        /* CSS Styling */
+        :root {
+            --arduino-teal: #00979d;
+            --arduino-blue: #006468;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+
+        header {
+            background: var(--arduino-teal);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background: var(--dark);
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: var(--arduino-blue);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .hero-text { flex: 2; }
+        .hero-img { flex: 1; border-radius: 10px; }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--arduino-teal);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        code {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            display: block;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 15px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--dark);
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Arduino Learning Hub</h1>
+    <p>From First Blink to Final Robot</p>
+</header>
+
+<nav>
+    <a href="#intro">Introduction</a>
+    <a href="#basics">The Basics</a>
+    <a href="#projects">Projects</a>
+    <a href="#code">Code Library</a>
+</nav>
+
+<div class="container">
+    
+    <section id="intro" class="hero-section">
+        <div class="hero-text">
+            <h2>What is Arduino?</h2>
+            <p>Arduino is an open-source electronics platform based on easy-to-use hardware and software. It's a "brain" you can program to interact with buttons, sensors, LEDs, and motors.</p>
+            <a href="#" class="btn">Download Arduino IDE</a>
+        </div>
+        
+    </section>
+
+    <section id="basics">
+        <h2>The Basic Components</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>The Breadboard</h3>
+                
+                <p>Think of this as your "sketchpad" for circuits. It allows you to connect components without soldering.</p>
+            </div>
+            <div class="card">
+                <h3>LEDs & Resistors</h3>
+                
+                <p>LEDs need resistors to limit the current flow, otherwise, they will burn out instantly!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="margin-top: 50px;">
+        <h2>Beginner Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>Project 1: The Blink</h3>
+                <p>The "Hello World" of electronics. Make an LED turn on and off.</p>
+                
+                <a href="#code" class="btn">View Code</a>
+            </div>
+            <div class="card">
+                <h3>Project 2: Button Control</h3>
+                <p>Learn how to use a push-button to control an output.</p>
+                
+                <a href="#code" class="btn">View Code</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="code" style="margin-top: 50px;">
+        <h2>The "Blink" Code</h2>
+        <p>Copy this code into your Arduino IDE to start your first project:</p>
+        <code>
+void setup() {<br>
+&nbsp;&nbsp;pinMode(13, OUTPUT); // Sets pin 13 as an output<br>
+}<br><br>
+void loop() {<br>
+&nbsp;&nbsp;digitalWrite(13, HIGH); // Turn LED on<br>
+&nbsp;&nbsp;delay(1000);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Wait 1 second<br>
+&nbsp;&nbsp;digitalWrite(13, LOW);&nbsp;&nbsp;// Turn LED off<br>
+&nbsp;&nbsp;delay(1000);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Wait 1 second<br>
+}
+        </code>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Arduino Beginner Hub | Keep Creating!</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Pro Learning Hub</title>
+    <style>
+        :root {
+            --primary: #00979d;
+            --secondary: #006468;
+            --bg: #f4f7f6;
+            --text: #2c3e50;
+            --card-bg: #ffffff;
+        }
+
+        /* Dark Mode variables */
+        .dark-mode {
+            --bg: #1a1a1a;
+            --text: #ecf0f1;
+            --card-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            transition: 0.3s;
+        }
+
+        /* Feature 1: Sticky Navigation with Search */
+        nav {
+            background: #2c3e50;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .search-container input {
+            padding: 8px;
+            border-radius: 20px;
+            border: none;
+            width: 200px;
+        }
+
+        /* Feature 2: Dark Mode Toggle */
+        .theme-toggle {
+            cursor: pointer;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+        /* Feature 3: Progress Tracker Cards */
+        .progress-section {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        /* Feature 4: Interactive Component Glossary */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .component-tag {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: help;
+            position: relative;
+        }
+
+        .component-tag:hover::after {
+            content: attr(data-definition);
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            width: 180px;
+            font-size: 0.8rem;
+            z-index: 10;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #555;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#glossary">Glossary</a>
+    </div>
+    <div class="search-container">
+        <input type="text" placeholder="Search lessons...">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Mode</button>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <section class="progress-section">
+        <h2>🚀 Your Learning Path</h2>
+        <div class="checklist-item">
+            <input type="checkbox" id="c1"> <label for="c1">Install Arduino IDE</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="c2"> <label for="c2">Identify Board Components</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="c3"> <label for="c3">Complete 'Blink' Project</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="c4"> <label for="c4">Understand Serial Monitor</label>
+        </div>
+    </section>
+
+    <section id="glossary">
+        <h2>🔌 Component Glossary</h2>
+        <p>Hover over a component to see what it does!</p>
+        <div class="glossary-grid">
+            <div class="component-tag" data-definition="Used to limit current and protect LEDs from burning out.">Resistor</div>
+            <div class="component-tag" data-definition="A light source that only allows current to flow in one direction.">LED</div>
+            <div class="component-tag" data-definition="A temporary board used for prototyping circuits without soldering.">Breadboard</div>
+            <div class="component-tag" data-definition="A variable resistor (like a volume knob).">Potentiometer</div>
+        </div>
+    </section>
+
+    <section id="projects" style="margin-top: 40px;">
+        <h2>📝 Project: Button Toggle</h2>
+        <p>This code turns an LED on only while the button is pressed.</p>
+        <pre>
+<button class="copy-btn" onclick="copyCode()">Copy</button>
+<code id="arduino-code">
+const int buttonPin = 2; 
+const int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  int state = digitalRead(buttonPin);
+  if (state == HIGH) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+}</code>
+        </pre>
+    </section>
+
+</div>
+
+<script>
+    // Toggle Dark/Light Mode
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    // Copy to Clipboard Feature
+    function copyCode() {
+        const code = document.getElementById('arduino-code').innerText;
+        navigator.clipboard.writeText(code);
+        alert("Code copied to clipboard!");
+    }
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Master Hub PRO</title>
+    <style>
+        :root {
+            --primary: #00979d;
+            --secondary: #006468;
+            --accent: #e67e22;
+            --bg: #f8f9fa;
+            --text: #2c3e50;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--text); }
+        
+        /* Navbar with Level Bar */
+        nav {
+            background: #2c3e50; color: white; padding: 10px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 100;
+        }
+
+        .xp-bar-container { background: #444; width: 200px; height: 15px; border-radius: 10px; overflow: hidden; }
+        #xp-fill { background: var(--primary); width: 0%; height: 100%; transition: 0.5s; }
+
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
+
+        /* Feature: Hardware Simulator Card */
+        .simulator-card {
+            background: linear-gradient(135deg, #00979d, #006468);
+            color: white; padding: 30px; border-radius: 15px; text-align: center;
+            margin-bottom: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Feature: Quiz Styling */
+        .quiz-container {
+            background: white; padding: 30px; border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .option-btn {
+            display: block; width: 100%; padding: 12px; margin: 8px 0;
+            border: 2px solid #ddd; border-radius: 8px; background: none;
+            cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s;
+        }
+        .option-btn:hover { background: #f0f0f0; border-color: var(--primary); }
+
+        .btn-pro {
+            background: var(--accent); color: white; padding: 12px 25px;
+            border: none; border-radius: 30px; font-weight: bold; cursor: pointer;
+            text-decoration: none; display: inline-block; margin-top: 10px;
+        }
+
+        pre { background: #272822; color: #f8f8f2; padding: 20px; border-radius: 10px; position: relative; }
+        .copy-tag { position: absolute; top: 10px; right: 10px; color: #777; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div style="font-weight: bold; font-size: 1.2rem;">ArduinoMaster</div>
+    <div style="text-align: right;">
+        <span id="rank-text">Level 1 (Novice)</span>
+        <div class="xp-bar-container"><div id="xp-fill"></div></div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="simulator-card">
+        <h2>🔌 No Hardware? No Problem!</h2>
+        <p>Don't have an Arduino board yet? Use the Wokwi Online Simulator to build and run your circuits right in the browser.</p>
+        <a href="https://wokwi.com/projects/new/arduino-uno" target="_blank" class="btn-pro" onclick="addXP(20)">Launch Online Simulator (+20 XP)</a>
+    </div>
+
+    <h2>Lesson 1: Serial Communication</h2>
+    <p>The <strong>Serial Monitor</strong> is how your Arduino "talks" to your computer. It’s essential for debugging.</p>
+    <pre>
+        <span class="copy-tag">Click to Copy</span>
+<code id="code-block" onclick="copyAndXP()">
+void setup() {
+  Serial.begin(9600); // Start communication
+}
+
+void loop() {
+  Serial.println("Hello World!"); // Send message
+  delay(1000);
+}</code>
+    </pre>
+
+    <div class="quiz-container">
+        <h3>⚡ Quick Check</h3>
+        <p id="question">What does <code>pinMode(13, OUTPUT);</code> do?</p>
+        <div id="quiz-options">
+            <button class="option-btn" onclick="checkAnswer(false)">It reads data from pin 13.</button>
+            <button class="option-btn" onclick="checkAnswer(true)">It prepares pin 13 to send electricity.</button>
+            <button class="option-btn" onclick="checkAnswer(false)">It turns the Arduino off.</button>
+        </div>
+        <p id="quiz-feedback" style="font-weight: bold; margin-top: 15px;"></p>
+    </div>
+
+</div>
+
+<script>
+    let xp = 0;
+    const maxXP = 100;
+
+    function addXP(amount) {
+        xp += amount;
+        if (xp > maxXP) xp = maxXP;
+        
+        // Update UI
+        document.getElementById('xp-fill').style.width = xp + "%";
+        
+        if (xp >= 100) {
+            document.getElementById('rank-text').innerText = "Level 2 (Maker) 🏆";
+            document.getElementById('rank-text').style.color = "#f1c40f";
+        }
+    }
+
+    function copyAndXP() {
+        const code = document.getElementById('code-block').innerText;
+        navigator.clipboard.writeText(code);
+        alert("Code Copied! You earned 10 XP.");
+        addXP(10);
+    }
+
+    function checkAnswer(isCorrect) {
+        const feedback = document.getElementById('quiz-feedback');
+        if (isCorrect) {
+            feedback.innerText = "✅ Correct! +30 XP";
+            feedback.style.color = "green";
+            addXP(30);
+        } else {
+            feedback.innerText = "❌ Try again! Hint: It sets the 'Mode' of a 'Pin'.";
+            feedback.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
+echo "# arduinobc-site.com" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bcaldera439-jpg/arduinobc-site.com.git
+git push -u origin main
+git remote add origin https://github.com/bcaldera439-jpg/arduinobc-site.com.git
+git branch -M main
+git push -u origin main
+https://github.com/bcaldera439-jpg/arduinobc-site.com.git
